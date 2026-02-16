@@ -54,6 +54,10 @@ export class DemoqaClient {
     return res.json() as Promise<{ books: Array<{ isbn: string }> }>;
   }
 
+  async listPublisher() {
+    
+  }
+
   async getBook(isbn: string) {
     const res = await this.request.get(`${this.baseURL}/BookStore/v1/Book`, { params: { ISBN: isbn } });
     expect(res.status()).toBe(200);

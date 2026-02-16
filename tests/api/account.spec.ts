@@ -85,7 +85,7 @@ test.describe('Account – edge & negative cases', () => {
     expect([400, 415]).toContain(r.status());
   });
 
-  test('Authorized with wrong password => 200 + boolean false', async ({ request }) => {
+  test('Authorized with wrong password => 404 + boolean false', async ({ request }) => {
     const creds = uniqueUser();
     await request.post(`${BASE}/Account/v1/User`, { data: creds });
 

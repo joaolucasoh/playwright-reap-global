@@ -23,9 +23,10 @@ export class SignInPage extends BasePage {
     this.continueButton = this.page.locator('data-test-id=sign-in-input-email-submit');
     this.signUpLink = this.page.locator('data-test-id=sign-up-link');
     this.signInButton = this.page.getByText('Sign in to Ramp');
+    this.page.getBy
     this.verificationCodeInput = this.page.locator('input[name="code"]');
     this.passwordInput = this.page.locator('input[type="password"], input[name="password"]');
-    this.useDifferentEmailLink = this.page.locator('data-test-id=use-a-different-email-link');
+    this.useDifferentEmailLink = this.page.getByTestId('data-test-id=use-a-different-email-link');
     this.resetPasswordLink = this.page.locator('a:has-text("Reset Password")');
     this.signInWithChromeButton = this.page.locator('button:has-text("Sign in with Google")');
     this.emailMeALinkButton = this.page.locator('button:has-text("Email me a link")');
